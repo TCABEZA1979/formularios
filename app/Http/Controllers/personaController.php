@@ -13,7 +13,7 @@ class personaController extends Controller
      */
     public function index()
     {
-        //
+        return view('formulario');
     }
 
     /**
@@ -42,7 +42,7 @@ class personaController extends Controller
       $persona->direccion=$request->direccion;
       $persona->meil=$request->meil;
 
-      $usuario->save();
+      $persona->save();
     }
 
     /**
