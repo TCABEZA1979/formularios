@@ -34,13 +34,13 @@ class personaController extends Controller
      */
     public function store(Request $request)
     {
-      $usuario= new usuarioModelo();
+      $persona= new persona();
 
-      $usuario->nombre=$request->nombre;
-      $usuario->apellido=$request->apellido;
-      $usuario->cedula=$request->cedula;
-      $usuario->direccion=$request->direccion;
-      $usuario->meil=$request->meil;
+      $persona->nombre=$request->nombre;
+      $persona->apellido=$request->apellido;
+      $persona->cedula=$request->cedula;
+      $persona->direccion=$request->direccion;
+      $persona->meil=$request->meil;
 
       $usuario->save();
     }
