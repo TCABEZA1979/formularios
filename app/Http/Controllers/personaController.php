@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\persona;
+use App\Models\persona;
 class personaController extends Controller
 {
     /**
@@ -34,15 +34,15 @@ class personaController extends Controller
      */
     public function store(Request $request)
     {
-      $persona= new persona();
+      $personas= new persona();
 
-      $persona->nombre=$request->nombre;
-      $persona->apellido=$request->apellido;
-      $persona->cedula=$request->cedula;
-      $persona->direccion=$request->direccion;
-      $persona->meil=$request->meil;
+      $personas->nombre=$request->nombre;
+      $personas->apellido=$request->apellido;
+      $personas->cedula=$request->cedula;
+      $personas->direccion=$request->direccion;
+      $personas->meil=$request->meil;
 
-      $persona->save();
+      $personas->save();
     }
 
     /**

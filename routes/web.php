@@ -21,3 +21,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/vista', [App\Http\Controllers\dashboard::class, 'index'])->name('vista');
+Route::get('/formulario', [App\Http\Controllers\personaController::class, 'index'])->name('formulario');
+
+
+Route::post('/registrousuario', [App\Http\Controllers\personaController::class, 'store'])->name('registrousuario');
+//Route::post('/registrousuario', 'personaController@store');//ejecuta bien
