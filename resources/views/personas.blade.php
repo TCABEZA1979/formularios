@@ -48,7 +48,15 @@
               <td>{{$clientes->apellido}}</td>
               <td>{{$clientes->direccion}}</td>
               <td>{{$clientes->meil}}</td>
-              <td>C</td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"></button>
+                  <button type="button" class="btn btn-warning"></button>
+                  <button type="button" class="btn btn-danger"></button>
+                </div>
+
+
+              </td>
             </tr>
             </tbody>
               @endforeach
@@ -62,7 +70,7 @@
             </tr>
             </tfoot>
           </table>
-
+@include('modal.personasmodal')
       </div>
     </div>
 </div>
