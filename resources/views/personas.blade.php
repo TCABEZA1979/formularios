@@ -2,7 +2,7 @@
 @section('content')
 <div class="container-fluid">
    <div class="row">
-    <div class="col-5">
+    <div class="col-4">
       <form  action="{{url('/registrarpersona')}}" method="post">
         {{ csrf_field()}}
         <div class="form-group">
@@ -28,28 +28,30 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
-    <div class="col-7">
+    <div class="col-8">
 
           <table id="example1" class="table table-bordered table-striped">
             <thead>
             <tr>
               <th>Cedula</th>
+              <th>Nombre</th>
               <th>Apellido</th>
               <th>Direccion</th>
               <th>Correo</th>
               <th>Acciones</th>
             </tr>
             </thead>
+            @foreach( $persona as $clientes)
             <tbody>
-              <td>Trident</td>
-              <td>Internet
-                Explorer 5.0
-              </td>
-              <td>Win 95+</td>
-              <td>5</td>
+              <td>{{$clientes->cedula}}</td>
+              <td>{{$clientes->nombre}} </td>
+              <td>{{$clientes->apellido}}</td>
+              <td>{{$clientes->direccion}}</td>
+              <td>{{$clientes->meil}}</td>
               <td>C</td>
             </tr>
             </tbody>
+              @endforeach
             <tfoot>
             <tr>
               <th>Cedula</th>
