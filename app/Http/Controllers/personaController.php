@@ -78,7 +78,7 @@ class personaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post->update($request->all());
     }
 
     /**

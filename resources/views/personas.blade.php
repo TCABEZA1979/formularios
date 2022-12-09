@@ -50,7 +50,15 @@
               <td>{{$clientes->meil}}</td>
               <td>
                 <div class="btn-group">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"></button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+                  data-id="{{$clientes->id}}"
+                  data-cedula="{{$clientes->cedula}}"
+                  data-nombre="{{$clientes->nombre}}"
+                  data-apellido="{{$clientes->apellido}}"
+                  data-direccion="{{$clientes->direccion}}"
+                  data-meil="{{$clientes->meil}}"
+                   onclick="addToCart(this);"
+                  ></button>
                   <button type="button" class="btn btn-warning"></button>
                   <button type="button" class="btn btn-danger"></button>
                 </div>
