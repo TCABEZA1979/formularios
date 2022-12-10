@@ -78,12 +78,16 @@ class personaController extends Controller
      */
     public function update(Request $request, $id)
     {
-      // $alumno = Alumno::find($id);
-      //     $alumno->fill($request->all());
-      //     $alumno->save();
-      //     return redirect()->action([AlumnoController::class, 'index']);
 
-  echo "hola";
+
+      $personas=persona::find($id);
+      $personas->nombre=$request->nombre;
+      $personas->apellido=$request->apellido;
+      $personas->cedula=$request->cedula;
+      $personas->direccion=$request->direccion;
+      $personas->meil=$request->meil;
+      $personas->save();
+      return redirect('/personas');
     }
 
     /**
@@ -94,6 +98,9 @@ class personaController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $personas = persona::find($id);
+      $personas->delete();
+
+      return redirect('/personas');
     }
 }

@@ -58,10 +58,15 @@
                   data-apellido="{{$clientes->apellido}}"
                   data-direccion="{{$clientes->direccion}}"
                   data-meil="{{$clientes->meil}}"
-                   onclick="addToCart(this);"
+                  onclick="addToCart(this);"
                   ></button>
                   <button type="button" class="btn btn-warning"></button>
-                  <button type="button" class="btn btn-danger"></button>
+                  <form action="{{ route('personas.destroy',$clientes->id) }}" method="POST">
+
+                       @csrf
+                       @method('DELETE')
+                   <button type="submit" class="btn btn-danger">Delete</button>
+                  </form>
                 </div>
 
 
