@@ -3,8 +3,9 @@
 <div class="container-fluid">
    <div class="row">
     <div class="col-4">
-      <form  action="{{url('/registrarpersona')}}" method="post">
-        {{ csrf_field()}}
+      <form  action="{{ route('personas.store') }}" method="post">
+        <!-- {{ csrf_field()}} -->
+         @csrf
         <div class="form-group">
           <label for="">Cedula</label>
           <input  class="form-control" id="Cedula" aria-describedby="emailHelp" name="cedula" placeholder="Cedula" required>

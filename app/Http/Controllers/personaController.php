@@ -24,7 +24,7 @@ class personaController extends Controller
      */
     public function create()
     {
-        //
+        echo "hola";
     }
 
     /**
@@ -44,7 +44,7 @@ class personaController extends Controller
       $personas->meil=$request->meil;
 
       $personas->save();
-      return view('personas');
+       return back();
     }
 
     /**
@@ -78,7 +78,12 @@ class personaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $post->update($request->all());
+      // $alumno = Alumno::find($id);
+      //     $alumno->fill($request->all());
+      //     $alumno->save();
+      //     return redirect()->action([AlumnoController::class, 'index']);
+
+  echo "hola";
     }
 
     /**

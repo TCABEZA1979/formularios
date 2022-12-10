@@ -9,9 +9,9 @@
       </div>
       <div class="modal-body">
 
-        <form  action="" method="post">
+        <form  action="{{ route('personas.update', $clientes->id) }}" method="post">
          {{ csrf_field()}}
-
+           @method('PUT')
             <input  type="hidden" id="id_edit" name="id" >
          <div class="form-group">
            <label for="">Cedula</label>
