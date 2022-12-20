@@ -8,7 +8,6 @@
         </button>
       </div>
       <div class="modal-body">
-
         <form  action="{{ route('personas.update', $clientes->id) }}" method="post">
          {{ csrf_field()}}
            @method('PUT')
@@ -35,12 +34,6 @@
          </div>
          <button type="submit" class="btn btn-primary">Submit</button>
        </form>
-
-
-
-
-
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
@@ -50,28 +43,12 @@
   </div>
 </div>
 <script>
-
 let addToCart = button => {
-
-
-
-
 $("#id_edit").val(button.getAttribute('data-id'));
 $("#Cedula_edit").val(button.getAttribute('data-cedula'));
 $("#Nombre_edit").val(button.getAttribute('data-nombre'));
 $("#Apellido_edit").val(button.getAttribute('data-apellido'));
 $("#Direccion_edit").val(button.getAttribute('data-direccion'));
 $("#meil_edit").val(button.getAttribute('data-meil'));
-
 }
-
-
-
-
-
-
-
-
-
-
 </script>
