@@ -46,7 +46,10 @@ class articuloController extends Controller
      */
     public function show($id)
     {
-        //
+      $articulo = articulo::all();
+
+
+    return response()->json($articulo);//
     }
 
     /**

@@ -19,3 +19,4 @@ Route::get('/vista', [App\Http\Controllers\dashboard::class, 'index'])->name('vi
 Route::get('/formulario', [App\Http\Controllers\personaController::class, 'index'])->name('formulario');
 //aqui se ejecuta el contralodr update entre otros
 Route::resource('/personas', App\Http\Controllers\personaController::class);
+Route::resource('/articulos', App\Http\Controllers\articuloController::class);
