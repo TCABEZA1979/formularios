@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('descripcion');
             $table->string('codigo');
             $table->string('marca');
-
             $table->string('proveedor');
             $table->string('almacen');
             $table->timestamps();

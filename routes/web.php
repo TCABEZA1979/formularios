@@ -20,3 +20,5 @@ Route::get('/formulario', [App\Http\Controllers\personaController::class, 'index
 //aqui se ejecuta el contralodr update entre otros
 Route::resource('/personas', App\Http\Controllers\personaController::class);
 Route::resource('/articulos', App\Http\Controllers\articuloController::class);
+Route::post('/create', [App\Http\Controllers\articuloController::class, 'store'])->name('/create');
+Route::post('/store', [App\Http\Controllers\articuloController::class, 'store'])->name('/store');

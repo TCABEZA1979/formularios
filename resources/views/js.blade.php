@@ -31,7 +31,7 @@
 <script src="js/plugins/dropzone/min/dropzone.min.js"></script>
 <script src="js/dist/js/adminlte.min.js"></script>
 <script src="js/dist/js/demo.js"></script>
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- <script src="../../plugins/jquery/jquery.min.js"></script> -->
 <!-- Bootstrap 4 -->
 
 
@@ -69,8 +69,8 @@
     });
   });
 </script>
-
-
+<!-- <script src="js/plugins/axios/axios.js"></script> -->
+<script src="js/plugins/vue/vues.js"></script>
 
 <!-- <script>
   $(function () {

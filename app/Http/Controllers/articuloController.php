@@ -14,7 +14,8 @@ class articuloController extends Controller
     public function index()
     {
         $articulo = articulo::all();
-        return view('articulos',compact('articulo'));
+        return view('articulos');
+
     }
 
     /**
@@ -22,9 +23,15 @@ class articuloController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+      $articulo = new articulo();
+      $articulo->nombre = $request->nombre;
+      $articulo->descripcion = $request->descripcion;
+      $articulo->codigo = $request->codigo;
+      $articulo->marca = $request->marca;
+      $articulo->almacen = $request->almacen;
+      $articulo->save();
     }
 
     /**
@@ -35,7 +42,20 @@ class articuloController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $articulo = new articulo();
+      $articulo->nombre = $request->nombre;
+      $articulo->descripcion = $request->descripcion;
+      $articulo->codigo = $request->codigo;
+      $articulo->marca = $request->marca;
+      $articulo->proveedor = $request->proveedor;
+      $articulo->almacen = $request->almacen;
+      $articulo->save();
+      return response()->json($articulo);
+      // $articulo->create($request->all());
+
+
+
+
     }
 
     /**
