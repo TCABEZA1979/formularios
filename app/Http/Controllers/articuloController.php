@@ -80,7 +80,8 @@ class articuloController extends Controller
      */
     public function edit($id)
     {
-        //
+      $articulo = articulo::find($id);
+      return response()->json($articulo);
     }
 
     /**
@@ -92,7 +93,18 @@ class articuloController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+         $articulo = articulo::findOrFail($id);
+         $articulo->nombre = $request->nombre;
+         $articulo->descripcion = $request->descripcion;
+         $articulo->codigo = $request->codigo;
+         $articulo->marca = $request->marca;
+         $articulo->proveedor = $request->proveedor;
+         $articulo->almacen = $request->almacen;
+         $articulo->save();
+        return response()->json($request->all());
+
+      // return $articulo;
     }
 
     /**
@@ -103,6 +115,10 @@ class articuloController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $articulo = articulo::find($id);
+      $articulo->delete();
+
+     return response()->json($id);
+
     }
 }
